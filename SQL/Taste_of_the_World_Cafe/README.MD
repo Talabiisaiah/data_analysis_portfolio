@@ -2,7 +2,7 @@ CREATE DATABASE Taste_of_the_World_Cafe;
 USE Taste_of_the_World_Cafe;
 -- menu_items and order_details tables were imported to the database
 
-										-- TASK 1
+						-- TASK 1
 -- 1. View the menu_items table and write a query to find the number of items on the menu
 SELECT * FROM menu_items;
 SELECT count(*) item_name FROM menu_items;
@@ -20,7 +20,7 @@ SELECT max(price) FROM menu_items WHERE category = 'italian';
 SELECT category, COUNT(*) AS total_no FROM menu_items GROUP BY category;
 SELECT category, AVG(price) AS avg_price FROM menu_items GROUP BY category;
 
-														-- TASK 2
+						-- TASK 2
 -- 1. View the order_details table. What is the date range of the table?
 SELECT * from order_details;
 SELECT min(order_date) AS min_order_date, max(order_date) AS max_order_date FROM order_details;
@@ -42,7 +42,7 @@ FROM order_details
 GROUP BY order_id 
 HAVING orders_more_than_12 > 12;
 
-												-- TASK 3
+						-- TASK 3
 -- 1. Combine the menu_items and order_details tables into a single table
 SELECT * FROM ORDER_DETAILS OD
 LEFT JOIN MENU_ITEMS MI
